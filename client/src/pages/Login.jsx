@@ -145,7 +145,7 @@ export default function Login() {
 
       {/* 2. THEME OVERLAY */}
       {/* Light Mode: White/60% opacity | Dark Mode: Slate-900/90% opacity to darken video */}
-      <div className="absolute inset-0 bg-white/40 dark:bg-slate-900/75 z-0 backdrop-blur-[2px] transition-colors duration-300" />
+      <div className="absolute inset-0 bg-white/40 dark:bg-slate-900/80 z-0 backdrop-blur-[2px] transition-colors duration-300" />
 
       {/* Theme Toggle Button - Top Right */}
       <button

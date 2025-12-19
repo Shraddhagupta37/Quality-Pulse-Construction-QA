@@ -1,16 +1,125 @@
-# React + Vite
+# Construction Quality Pulse 📘
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack, real-time web application for daily construction quality assurance, site progress monitoring, QA reporting, analytics, and instant notifications.
 
-Currently, two official plugins are available:
+**Built with:** React.js • TailwindCSS • Node.js • Express.js • MongoDB • Socket.io
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+### 👥 User Roles
+- **Admin** – Manage users, sites, reports, and analytics
+- **Engineer** – Submit QA reports with photo uploads
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🏗️ Construction Sites
+- Create, edit, and manage construction sites
+- Assign engineers to specific sites
+- Track progress, status, and timeline, and compliance
 
-## Expanding the ESLint configuration
+### 📝 Daily QA Reports
+- Submit detailed inspection reports with photos
+- Report approval workflow (Pending → Approved/Rejected)
+- Real-time updates via Socket.io
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 Analytics Dashboard
+- Compliance percentage and Pass/Fail statistics
+- day-wise QA trend visualization
+- Site-wise performance comparison
+- Material failure distribution
+
+### 🔔 Real-Time Notifications
+- Toast alerts, notification panel, and live dashboard feed
+- Triggered on: new reports, site assignments, failures, and status updates
+
+### 🔐 Security
+- JWT authentication with bcrypt password hashing
+- Role-based API access control
+- Protected frontend routes
+
+### 📁 Additional Features
+- CSV/PDF export functionality
+- Audit logging with timestamps
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js v16+
+- MongoDB (local or cloud)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/construction-quality-pulse.git
+cd construction-quality-pulse
+```
+
+### Backend Setup
+```bash
+cd server
+npm install
+```
+
+Create `.env`:
+```
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+```
+
+```bash
+npm run dev  # Runs at http://localhost:5000
+```
+
+### Frontend Setup
+```bash
+cd client
+npm install
+```
+
+Create `.env`:
+```
+VITE_API_URL=http://localhost:5000
+```
+
+```bash
+npm run dev  # Runs at http://localhost:5173
+```
+
+## 📚 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Register user |
+| POST | `/api/auth/login` | Login user |
+| GET | `/api/sites` | List all sites |
+| POST | `/api/sites` | Create site (Admin) |
+| GET | `/api/reports` | Get QA reports |
+| POST | `/api/reports` | Submit report |
+
+## 🧪 Testing
+
+```bash
+npm run test
+```
+
+## 📦 Deployment
+
+**Backend:** Push to Render/Railway with environment variables
+
+**Frontend:** Build and deploy to Vercel/Netlify
+```bash
+npm run build
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push and open a Pull Request
+
+## 📄 License
+MIT License – feel free to use and modify
+
+## 💬 Support
+Have questions? [Open an issue](https://github.com/YOUR_USERNAME/construction-quality-pulse/issues) or contact the maintainer.
